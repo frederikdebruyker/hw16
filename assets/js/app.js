@@ -1,3 +1,23 @@
+// Level 1: D3 Dabbler
+
+// You need to create a scatter plot between two of the data variables such as Healthcare vs. Age or Smokers vs. Poverty.
+// FD: poverty versus healthcare chosen. All number variables parsed out for reference only.
+
+// Using the D3 techniques we taught you in class, create a scatter plot that represents each state with circle elements. You'll code this graphic in the app.js file of your homework directory—make sure you pull in the data from data.csv by using the d3.csv function. Your scatter plot should ultimately appear like the image at the top of this section.
+
+
+// Include state abbreviations in the circles.
+// Create and situate your axes and labels to the left and bottom of the chart.
+// Note: You'll need to use python -m http.server to run the visualization. This will host the page at localhost:8000 in your web browser.
+
+// ==============================
+// Level 2: Impress the Boss (Optional Challenge Assignment)
+
+// FD: Not done as this seemed to adversely affect scoring on prior assignment. I will do this functionality as part of the project.
+// ==============================
+// FD: a little extra playing around with showing words through SVG setup and jumbotron header setup in line with previous homework assignments
+// ==============================
+
 var svgWidth = 960;
 var svgHeight = 500;
 
@@ -23,7 +43,7 @@ var chartGroup = svg.append("g")
 // Import Health Risks Demographics Data
 d3.csv("assets/data/data.csv")
     .then(function (hrd) {
-        // console.log(hrd);
+        // console.log(hrd); // specifically left in to allow for troubleshooting if this code is used for other activities
         // Step 1: Parse Data/Cast as numbers
         // ==============================
         hrd.forEach(function (data) {
@@ -43,7 +63,7 @@ d3.csv("assets/data/data.csv")
             data.smokesLow = parseFloat(data.smokesLow);
             data.smokesHigh = parseFloat(data.smokesHigh);
         });
-        // console.log(hrd);
+        // console.log(hrd); // specifically left in to allow for troubleshooting if this code is used for other activities
 
         // Step 2: Create scale functions
         // ==============================
@@ -80,7 +100,6 @@ d3.csv("assets/data/data.csv")
             .attr("r", "15")
             .attr("fill", "blue")
             .attr("opacity", ".5");
-            // .text(d => d.abbr);
 
         // Step 5b: Create Circle Texts
         // ==============================
@@ -93,37 +112,6 @@ d3.csv("assets/data/data.csv")
             .attr("fill","white")
             // .attr("class","text-primary")
             .text(d => d.abbr);
-
-        // Step 6: Initialize tool tip
-        // ==============================
-        // var toolTip = d3.tip()
-        //     .attr("class", "tooltip")
-        //     .offset([80, -60])
-        //     .html(function (d) {
-        //         return (`${d.state}<br>Hair length: ${d.poverty}<br>Hits: ${d.healthcare}`);
-        //     });
-
-        // Step 7: Create tooltip in the chart
-        // ==============================
-        // chartGroup.call(toolTip);
-
-        // Step 8: Create event listeners to display and hide the tooltip
-        // ==============================
-        // circlesGroup.on("click", function (data) {
-        //     toolTip.show(data, this);
-        // })
-        //     // onmouseout event
-        //     .on("mouseout", function (data, index) {
-        //         toolTip.hide(data);
-        //     });
-
-        // statesGroup.on("click", function (data) {
-        //     toolTip.show(data, this);
-        // })
-        //     // onmouseout event
-        //     .on("mouseout", function (data, index) {
-        //         toolTip.hide(data);
-        //     });
 
         // Create axes labels
         chartGroup.append("text")

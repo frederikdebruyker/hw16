@@ -1,0 +1,10 @@
+<svg width="960" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg"><g></g>
+<g transform="translate(480,300)">
+<text text-anchor="middle" transform="translate(-260,-200)rotate(0)" style="font-size: 100px; font-family: Impact; fill: rgb(255, 255, 0);">healthcare</text>
+<text text-anchor="middle" transform="translate(-100,0)rotate(-90)" style="font-size: 100px; font-family: Impact; fill: rgb(0, 255, 0);">poverty</text>
+<text text-anchor="middle" transform="translate(-270,-50)rotate(0)" style="font-size: 100px; font-family: Impact; fill: rgb(0, 0, 255);">age</text>
+<text text-anchor="middle" transform="translate(100,-70)rotate(0)" style="font-size: 100px; font-family: Impact; fill: rgb(255, 0, 0);">income</text>
+<text text-anchor="middle" transform="translate(300,170)rotate(0)" style="font-size: 100px; font-family: Impact; fill: rgb(255, 0, 255);">obesity</text>
+<text text-anchor="middle" transform="translate(-470,50)rotate(90)" style="font-size: 100px; font-family: Impact; fill: rgb(0, 255, 255);">smokes</text> 
+</g>
+</svg>
