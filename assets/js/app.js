@@ -107,9 +107,10 @@ d3.csv("assets/data/data.csv")
             .data(hrd)
             .enter()
             .append("text")
-            .attr("x", d => (xLinearScale(d.poverty)-15/2)) // adjusted for radius
-            .attr("y", d => (yLinearScale(d.healthcare)+15/2)) // adjusted for radius
+            .attr("x", d => (xLinearScale(d.poverty)-8)) // adjusted for radius
+            .attr("y", d => (yLinearScale(d.healthcare)+5)) // adjusted for radius
             .attr("fill","white")
+            .attr("font-size",12)
             // .attr("class","text-primary")
             .text(d => d.abbr);
 
